@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="images/icon.png" />
+
+    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+
+
+    <link rel="stylesheet" href="css/chat.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatter</title>
+</head>
+<body onload="loadFirebase()" onload="getData()">
+
+    <!--div class="banner">
+        Chatter<i class="material-icons">send</i>
+    </div-->
+    <div class="banner">
+        <div class="backbtn" onclick="backbtnfunc()"><i class="material-icons">arrow_back</i></div>
+        <div class="bannerData">
+            <div class="toIcon"></div>
+            <div class="toName"></div>
+        </div>
+
+    </div>
+
+
+    <div class="messageContainer">
+        <div id="messageWrapper" class="messageWrapper">
+
+        </div>
+    </div>
+
+
+
+    <div class="inputContainer">
+        <div class="inputWrapper">
+            <input type="text" id="inputData" class="inputData" placeholder="Type a message">
+            <button id="sendButton" class="sendButton" onclick="sendTo()"><i class="material-icons">send</i></button>
+        </div>
+    </div>
+</body>
+
+<script>
+var toName = localStorage.getItem('to');
+var toIcon = toName.slice(0,1).toUpperCase();
+document.querySelector('.toName').innerHTML = toName;
+document.querySelector('.toIcon').innerHTML = toIcon;
+
+
+function backbtnfunc(){
+    window.location.href = "people.html";
+}
+
+//THIS IS TO ADD CLASS NAME TO A DYNAMICALLY ADDED ELEMENT
+/*
+
+function myFunction() {
+  var newText = document.createElement("div");
+
+  newText.id = "textData";
+  newText.className = "textData";
+
+  var sName = document.createElement('span');
+  sName.className = 'sName';
+  sName.id = 'sName';
+  sName.innerHTML = 'SName';
+  newText.appendChild(sName);
+  var textM = document.createElement('span');
+  textM.id = textM.className = 'textMessage';
+  textM.innerHTML = "New Message";
+  newText.appendChild(textM);
+  document.getElementById('messageSent').appendChild(newText);
+}
+*/
+
+    //document.querySelector('.banner').innerHTML = localStorage.getItem('to');
+
+
+</script>
+
+<script src="js/chat.js"></script>
+
+<script>
+    document.onkeydown = function(e) {
+        if(event.keyCode == 123) {
+           return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+           return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+           return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+           return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+           return false;
+        }
+      }
+    </script>
+    <script language="javascript">
+        document.onmousedown=disableclick;
+        status="";
+        function disableclick(event)
+        {
+          if(event.button==2)
+           {
+             alert(status);
+             return false;    
+           }
+        }
+        </script>
+</html>

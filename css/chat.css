@@ -1,0 +1,214 @@
+body{
+    width: auto;
+    margin: 0;
+    background: #2f3640;
+    background-image: url('background.png');
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+*:focus{
+    outline: none;
+}
+
+.banner{
+    z-index: 999;
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+
+    padding: 3px;
+
+    background: #0984e3;
+    color: #2f3640;
+
+    text-align: left;
+    font-size: large;
+}
+
+.bannerData{
+    display: flex;
+    flex-direction: row;
+    margin: 4px;
+}
+
+.banner .toIcon{
+    width: 20px;
+    height: 20px;
+
+    border: none;
+    border-radius: 50%;
+    padding: 4px;
+
+    color: #0984e3;
+    background: #2f3640;
+
+    text-align: center;
+    font-size: large;
+}
+
+.banner .toName{
+    padding: none;
+    margin: 5px;
+    margin-top: 3px;
+
+    color: #2f3640;
+}
+
+.banner .backbtn{
+    margin: 5px;
+
+}
+
+
+
+    /*============= Message Container =============*/
+    
+    /*==== General Properties ====*/
+    
+    .messageContainer{
+        width: auto;
+        height: auto;
+
+        background: blue;
+    }
+
+    .messageWrapper{
+        width: 100%;
+        height: auto;
+        position: absolute;
+
+        bottom: 8.25%;
+
+        transition: all 1s ease;
+    }
+
+    .messageRecSend{
+        width: 97.5%;
+        padding: 3px;
+
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+
+    .textData{
+        display: flex;
+        flex-direction: column;
+
+        word-wrap: break-word;
+        padding: 10px;
+        margin-bottom: 10px;
+        
+        color: #b2bec3;
+
+        border-radius: 12px;
+        background: linear-gradient(145deg, #323a44, #2a313a);
+        box-shadow:  5px 5px 9px #13161a,  -5px -5px 9px #4b5666;
+
+
+    }
+
+    .textData .sName{
+        color: #0984e3;
+
+        font-size: x-small;
+    }
+
+    /*==== Specific Properties ====*/
+
+    .messageSent .textData{
+        margin-left: 55%;
+        margin-right: 7px;
+        animation-name: textDataMS;
+        animation-duration: 0.5s;
+    }
+
+    .messageRecieve .textData{
+        margin-right: 55%;
+        margin-left: 7px;
+        animation-name: textDataMR;
+        animation-duration: 0.7s;
+    }
+
+
+
+
+    /*============= Input Container ==============*/
+
+    .inputContainer{
+        width: 100%;
+        position: absolute;
+                
+
+
+
+        bottom: 1%;
+  
+
+    }
+
+    .inputWrapper{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .inputData{
+        width: 97%;
+        font-size: 17px;
+
+        padding: 9px;
+        margin-right: 4px;
+        margin-left: 4px;
+
+        border: none;
+        border-radius: 25px;
+
+        color: #0984e3;
+
+
+
+        border-radius: px;
+        background: #2f3640;
+        box-shadow: inset 5px 5px 10px #13161a, 
+                    inset -5px -5px 10px #4b5666;
+    }
+
+    .sendButton{
+        padding: 3px;
+        margin-right: 3px;
+
+        border: none;
+
+        color: #0984e3;
+
+        border-radius: 44px;
+        background: linear-gradient(145deg, #323a44, #2a313a);
+        box-shadow:  5px 5px 9px #13161a, 
+                     -5px -5px 9px #4b5666;
+    }
+
+    .sendButton .material-icons{
+        padding: 3px;
+        font-size: 30px;
+    }
+
+
+    @keyframes textDataMS{
+        from {
+            clip-path: circle(0.4% at 50% 50%);
+        }
+        to {clip-path: circle(110% at 50% 50%);}
+    }
+    @keyframes textDataMR{
+        from {
+            clip-path: circle(0.4% at 50% 50%);
+        }
+        to {clip-path: circle(110% at 50% 50%);}
+    }

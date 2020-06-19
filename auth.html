@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="images/icon.png" />
+
+    
+    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatter- Authenticate</title>
+</head>
+<body>
+    <div class="banner">
+        Chatter<i class="material-icons">send</i>
+    </div>
+    <div class="welcome" >
+        <h2>Welcome to Chatter!!!</h2>
+        <span id="welcomeButtons">
+            To start chattering, please
+            <div>
+                <br>
+                <button class="loginner buttonType" onclick="showLogin()">Log In</button>
+                or
+                <button class="signupper buttonType" onclick="showSignup()">Sign Up</button>
+            </div>
+        </span>
+    </div>
+    <div class="signContainer" id="signContainer">
+        <div class="signWrapper">
+            <div class="inputCred">
+                <label id="lblusername">Username</label>
+                <input type="text" id="username" class="inCred">
+                <label>Email</label>
+                <input type="text" id="email" class="inCred">
+                <label>Password</label>
+                <input type="password" id="password" class="inCred">
+                <span id="errorHTML" class="errorHTML"></span>
+            </div>
+            <div class="credbuttons" id="credbuttons">
+                <button class="buttonType" id="btnLogIn" onclick="logIN()">Log In</button>
+                <button class="buttonType" id="btnSignUp" onclick="signUP()">Sign Up</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        A site made by<br> Aum Bhatt.
+    </footer>
+</body>
+
+
+<script src="js/auth.js"></script>
+
+<script>
+    function showLogin(){
+        document.getElementById("btnSignUp").style.display = "none";
+        document.getElementById('username').style.display = "none";
+        document.getElementById('lblusername').style.display = "none";
+        hideCredButtons();
+    }
+
+
+    function showSignup(){
+        document.getElementById("btnLogIn").style.display = "none";
+        hideCredButtons();
+    }
+
+    function hideCredButtons(){
+        
+        document.getElementById('welcomeButtons').innerHTML = "Please Enter :";
+
+        document.getElementById('signContainer').style.visibility = "visible";
+        document.getElementById('signContainer').style.clipPath = "circle(150% at 50% 50%)";
+        
+    }
+</script>
+
+<!--script>
+document.onkeydown = function(e) {
+    if(event.keyCode == 123) {
+       return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+       return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+       return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+       return false;
+    }
+    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+       return false;
+    }
+  }
+</script>
+
+<script language="javascript">
+    document.onmousedown=disableclick;
+    status="";
+    function disableclick()
+    {
+      if(event.button==2)
+       {
+         alert(status);
+         return false;    
+       }
+    }
+    </script-->
+</html>

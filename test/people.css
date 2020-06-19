@@ -1,0 +1,144 @@
+/*
+    COLORS
+
+    #2f3640 -> Grey
+    #0984e3 -> Blue
+    #636e72 -> Last Message Grey
+*/
+
+body{
+    margin: 0;
+
+    background: #2f3640;
+    
+    font-family: 'Montserrat', sans-serif;
+}
+
+*:focus{
+    outline: none;
+}
+
+.banner{
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    padding: 3px;
+
+    background: #2f3640;
+    color: #0984e3;
+    font-size: xx-large;
+}
+
+.peopleContainer{
+    width: auto;
+    height: 100vh;
+
+    margin-top: 7vh;
+    
+}
+
+.peopleWrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*==== Persons ====*/
+
+.person{
+    width: auto;
+
+    
+}
+
+.personWrapper{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+
+    margin: 15px;
+    margin-top: 20px;
+    padding: 10px;
+
+    border-radius: 9px;
+    background: linear-gradient(145deg, #2a313a, #323a44);
+    box-shadow:  7px 7px 14px #13161a, 
+             -7px -7px 14px #4b5666;
+    
+}
+
+
+.personWrapper .dp{
+    width: 17%;
+    height: 17%;
+
+    border: none;
+    border-radius: 50%;
+    padding: 4px;
+
+    background: #0984e3;
+    color: #2f3640;
+
+    text-align: center;
+    font-size: xx-large;
+}
+
+.dp img{
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    border-radius: 100%;
+}
+
+.personWrapper .userData{
+    width: 100%;
+
+    margin-left: 15px;
+    padding: 1px;
+
+    font-size: medium;
+}
+
+.userData .username{
+    padding: 2px;
+
+    color: #0984e3;
+}
+
+.userData .lastMs{
+
+    padding: 2px;
+
+    color: #636e72;
+    font-size: 15px;
+}
+
+.addPeople{
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    padding: 15px;
+}
+
+.addPeople .btnAddUser{
+    padding: 7px;
+
+    border: none;
+    border-radius: 90px;
+    background: linear-gradient(145deg, #323a44, #2a313a);
+    box-shadow:  5px 5px 5px #13161a, 
+                 -5px -5px 5px #4b5666;
+
+    background: none;
+    color: #0984e3;
+}
+
+.addPeople .btnAddUser .material-icons{
+    padding: 7px;
+    
+    text-align: center;
+    font-size: xx-large;
+}

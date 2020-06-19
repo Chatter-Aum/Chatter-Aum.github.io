@@ -1,0 +1,165 @@
+body{
+    margin: 0;
+    background: #2f3640;
+    background-image: url('background.png');
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+*:focus{
+    outline: none;
+}
+
+
+.buttonType{
+    padding: 7px;
+
+    color: #0984e3;
+    font-size: large;
+
+    transition: all 0.2s;
+
+    border: none;
+    border-radius: 4px;
+    background: #2f3640;
+    box-shadow:  4px 4px 8px #1f242b, 
+                 -4px -4px 8px #3f4855;
+}
+
+
+.buttonType:active{
+    background: #0984e3;
+    color: #2f3640;
+}
+
+.banner{
+    z-index: 999;
+    width: auto;
+
+    background: #2f3640;    
+
+    text-align: center;
+    
+
+    color: #0984e3;
+    
+    font-weight: 500;
+    font-size: 50px;
+}
+
+.banner i{
+    padding-top: 3px;
+    font-size: 50px;
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 10vh;
+
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.welcome h2{
+    color: white;
+    font-weight: 50;
+}
+
+.welcome span{
+    color: #0984e3;
+}
+
+.loginner{
+    margin-right: 10px;
+}
+
+.signupper{
+    margin-left: 10px;
+}
+
+.signContainer{
+    visibility: hidden;
+    position: relative;
+    width: 100%;
+    height: auto;
+    
+    justify-content: center;
+    align-items: center;
+
+    clip-path: circle(0.0% at 50% 50%);
+    
+    transition: all 0.7s;
+
+}
+
+.signWrapper{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+
+    padding: 5px;
+    margin: 10px;
+    
+    border: none;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+    background: linear-gradient(145deg, #323a44, #2a313a);
+    box-shadow:  5px 5px 13px #13161a, 
+                -5px -5px 13px #4b5666;
+}
+
+.inputCred{
+    display: flex;
+    flex-direction: column;
+
+    font-size: large;
+}
+
+.inputCred label,span, .credbuttons{
+    padding: 5px;
+
+    color: white;
+}
+
+.inputCred label{
+    font-size: medium;
+}
+
+.inputCred .errorHTML{
+    color: #ee5253;
+}
+
+.inCred{
+
+    width: 95%;
+    padding: 5px;
+
+    color: #0984e3;
+    font-size: large;
+
+    border: none;
+    border-radius: 10px;
+    background: #2f3640;
+    box-shadow: inset 5px 5px 6px #1f242a, 
+                inset -5px -5px 6px #3f4856;
+}
+
+
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
+    color: #0984e3;
+
+    border-radius: 0px;
+    background: #2f3640;
+    text-align: center;
+}

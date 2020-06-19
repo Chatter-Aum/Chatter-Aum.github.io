@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="images/icon.png" />
+    <!--script src="https://www.gstatic.com/firebasejs/7.15.2/firebase-app.js"></script-->
+
+    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+    <script src="js/people.js"></script>
+
+    <link rel="stylesheet" href="css/people.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People</title>
+</head>
+<body onload="//authUser()">
+    <div class="banner">
+        <i class="material-icons">people</i>People<div id="userDisp" class="userDisp">user</div>
+    </div>
+    
+    <div class="peopleContainer">
+        <div id="peopleWrapper" class="peopleWrapper">
+
+            <!--div id="person" class="person">
+                <input type="text" id="valUser" value="person" style="display: none">
+                <div id="personWrapper" class="personWrapper">
+                    <div id="dp" class="dp">E<img src="blank.png"></div>
+                    <div id="userData" class="userData">
+                        <div id="username" class="username">Test Name</div>
+                        <div id="lastMs" class="lastMs">Last Message</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="person" class="person">
+                <input type="text" id="TovalUser" value="person" style="display: none">
+                <div id="personWrapper" class="personWrapper">
+                    <div id="dp" class="dp">T<img src="blank.png"></div>
+                    <div id="userData" class="userData">
+                        <div id="username" class="username">Test Name</div>
+                        <div id="lastMs" class="lastMs">Last Message</div>
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
+
+    <div class="addPeople">
+        <button class="btnAddUser" onclick="addUser()">
+            <i class="material-icons">person_add</i>
+        </button>
+    </div>
+    <footer>
+        A site made by<br> Aum Bhatt.
+    </footer>
+</body>
+
+<script>
+    //console.log(document.getElementById('valText').value);
+
+    /*window.setInterval(function(){
+       location.reload();
+    }, 5000);
+    */
+    document.getElementById('userDisp').innerHTML = "Hi " + localStorage.getItem("UserName") + "!";
+</script>
+
+
+<!--script>
+    document.onkeydown = function(e) {
+        if(event.keyCode == 123) {
+           return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+           return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+           return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+           return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+           return false;
+        }
+      }
+    </script>
+    <script language="javascript">
+        document.onmousedown=disableclick;
+        status="";
+        function disableclick(event)
+        {
+          if(event.button==2)
+           {
+             alert(status);
+             return false;    
+           }
+        }
+        </script-->
+
+
+</html>
