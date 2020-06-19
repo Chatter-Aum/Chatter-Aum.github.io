@@ -129,10 +129,10 @@ body{
 .addPeople{
     z-index: 999;
     position: fixed;
-    bottom: 0;
+    bottom: 2%;
     right: 0;
 
-    background: #2f3640;
+    
     padding: 15px;
 }
 
@@ -146,6 +146,7 @@ body{
                  -5px -5px 5px #4b5666;
 
     background: none;
+    background: #2f3640;
     color: #0984e3;
 }
 
@@ -154,6 +155,21 @@ body{
     
     text-align: center;
     font-size: xx-large;
+}
+
+.addPeople label{
+    background: none;
+    color: white;
+    visibility: hidden;
+    bottom: 5px;
+    
+    position: relative;
+    animation: mymove 4s forwards;
+    animation-iteration-count: 2;
+    
+    transition: all 1s;
+
+    font-size: medium;
 }
 
 footer{
@@ -167,3 +183,11 @@ footer{
     background: #2f3640;
     text-align: center;
 }
+
+@keyframes mymove {
+    0%   {opacity: 0; visibility: visible;}
+    25%  {opacity: 1;}
+    50%  {opacity: 0;}
+    70% {opacity: 1;}
+    100% {opacity: 0;}
+  }
