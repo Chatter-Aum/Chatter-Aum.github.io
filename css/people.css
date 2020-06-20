@@ -4,6 +4,7 @@
     #2f3640 -> Grey
     #0984e3 -> Blue
     #636e72 -> Last Message Grey
+    #2ecc71 -> Green
 */
 
 body{
@@ -158,11 +159,13 @@ body{
 }
 
 .addPeople label{
-    background: none;
-    color: white;
+    background: #0984e3;
+    color: #2f3640;
     visibility: hidden;
     bottom: 5px;
-    
+    padding: 10px;
+
+    border-radius: 12px;
     position: relative;
     animation: mymove 4s forwards;
     animation-iteration-count: 2;
