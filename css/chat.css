@@ -20,10 +20,9 @@ body{
 
     padding: 3px;
 
-    color: #0984e3;
-    background: #2f3640;
+    background: #0984e3;
+    color: #2f3640;
 
-    border-bottom: #0984e3 solid 1px;
 
     text-align: left;
     font-size: large;
@@ -43,8 +42,8 @@ body{
     border-radius: 50%;
     padding: 4px;
 
-    color: #2f3640;
-    background: #0984e3;
+    background: #2f3640;
+    color: #0984e3;
 
     text-align: center;
     font-size: large;
@@ -55,7 +54,7 @@ body{
     margin: 5px;
     margin-top: 3px;
 
-    color: #0984e3;
+    color: #2f3640;
 }
 
 .banner .backbtn{
