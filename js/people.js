@@ -135,7 +135,7 @@ function printer(userToPrint){
 
     var person = document.createElement('div');
     person.id = person.className = "person";
-    person.id = actualData.username;
+    person.id = userToPrint;
     person.onclick = function(){
         localStorage.setItem("to",person.id);
         console.log("localstorer change tousername = " + localStorage.getItem("to"));
