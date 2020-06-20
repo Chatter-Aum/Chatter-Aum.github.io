@@ -67,7 +67,8 @@ firebase.auth().onAuthStateChanged(function(user) {
         console.log("EMAIL : " + email)
         getUserName(email);
         localStorage.setItem("userAuthInfo", userAuthInfo);
-        window.location.href = "people.html";
+        //window.location.href = "people.html";
+        setTimeout(function(){ window.location.href = "people.html"; }, 5000);
     } else {
       // User is signed out.
       // ...
