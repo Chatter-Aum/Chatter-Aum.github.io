@@ -154,7 +154,7 @@ body{
 
 footer{
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
 
     color: #0984e3;
