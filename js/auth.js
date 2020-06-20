@@ -1,3 +1,5 @@
+var emailList = [];
+
 
     // Your web app's Firebase configuration
   // Your web app's Firebase configuration
@@ -17,13 +19,15 @@
 const auth = firebase.auth();
 var database = firebase.database();
 var appendUserList = database.ref('chatApp/userList');
+//getUserName();
 //appendUserList.push({username: "test", email:"test11@tes.com"})
 
 function logIN(){
 
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
-    
+    var username = document.getElementById('username').value;
+    localStorage.setItem("UserName",username);
         auth.signInWithEmailAndPassword(email, password).catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
@@ -65,10 +69,20 @@ firebase.auth().onAuthStateChanged(function(user) {
       var userID = user.uid;
       var userAuthInfo = user;
         console.log("EMAIL : " + email)
-        getUserName(email);
+        /*emailList.forEach(function(item,index) {
+            if(item.email == email){
+                localStorage.setItem('UserName', item.username);
+                console.log("Returning Username " + item.username);
+                //window.location.href = "people.html"
+                //break;
+                }
+                console.log(item.username) 
+        });*/
+      
         localStorage.setItem("userAuthInfo", userAuthInfo);
-        //window.location.href = "people.html";
-        setTimeout(function(){ window.location.href = "people.html"; }, 5000);
+        window.location.href = "people.html";
+        //document.getElementById('welcomeButtons').innerHTML = "Loading....";
+        //setTimeout(function(){ window.location.href = "people.html"; }, 5000);
     } else {
       // User is signed out.
       // ...
@@ -80,9 +94,9 @@ function errData(){
     console.log("Error getting username");
 }
 
-function getUserName(email){
+function getUserName(){
     console.log("getUserName");
-    appendUserList.once('value', function(uData){
+    appendUserList.on('value', function(uData){
         var incomingList = uData.val();
         var listKeys = Object.keys(incomingList);
         console.log("ListKeys = " + listKeys);
@@ -90,12 +104,8 @@ function getUserName(email){
             var k = listKeys[i];
             var actualListItem = incomingList[k];
             console.log('Actual List Item : ' + actualListItem);
-            if(actualListItem.email == email){
-                localStorage.setItem('UserName', actualListItem.username);
-                console.log("Returning Username " + actualListItem.username);
-                //window.location.href = "people.html"
-                break;
-            }
+            emailList.push(actualListItem);
+            console.log(emailList);
         }
       },errData());
 }
