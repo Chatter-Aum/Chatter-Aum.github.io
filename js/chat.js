@@ -106,10 +106,11 @@ function fetchData(data){
             }
             // Fetching Recieved Messages
             else if((actualData.username === toUser)&&(actualData.To === username)){
+                play();
                 console.log("Foreign User : " + actualData.username);
                 console.log("Data : "+ actualData.data);
                 printer(actualData, 'messageRecieve');
-                play();
+                
             }
 
 

@@ -18,22 +18,17 @@ server = server.createServer(function(request , response)
         response.writeHead(200 , {'Content-Type' : 'text/html'});
         indcustom.pipe(response); 
     }
-    else if(request.url.match("auth$"))
-    {  name = "auth.html";
-        var indcustom = fs.createReadStream(name , 'utf8');
-        response.writeHead(200 , {'Content-Type' : 'text/html'});
-        indcustom.pipe(response); 
-    }
-    else if(request.url.match("chat$"))
-    {  name = "chat.html";
-        var indcustom = fs.createReadStream(name , 'utf8');
-        response.writeHead(200 , {'Content-Type' : 'text/html'});
-        indcustom.pipe(response); 
-    }
+    
     else if(request.url.match("css$"))
     {
         var indcustom = fs.createReadStream(__dirname + request.url , 'utf8');
         response.writeHead(200, {'Content-Type' : 'text/css'});
+        indcustom.pipe(response);
+    }
+    else if(request.url.match(".html$"))
+    {
+        var indcustom = fs.createReadStream(__dirname + request.url , 'utf8');
+        response.writeHead(200, {'Content-Type' : 'text/html'});
         indcustom.pipe(response);
     }
     else if(request.url.match("js$"))

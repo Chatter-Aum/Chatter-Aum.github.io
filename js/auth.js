@@ -57,7 +57,7 @@ function signUP(){
             // ...
         });
         //localStorage.setItem("userColor", Math.floor(Math.random() * (colorList.length-1)));
-        appendUserList.push({username: username, email: email});
+        //appendUserList.push({username: username, email: email});
         return 0;
     //}
 }
@@ -78,7 +78,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                 }
                 console.log(item.username) 
         });*/
-      
+        appendUserList.push({username: username, email: email});
         localStorage.setItem("userAuthInfo", userAuthInfo);
         window.location.href = "people.html";
         //document.getElementById('welcomeButtons').innerHTML = "Loading....";
